@@ -12,17 +12,45 @@ namespace ExploringPlanets.Services
     public class PlanetService : IPlanetService
     {
         private readonly IPlanetRepository planetRepository;
+        private readonly ICrewRepository crewRepository;
 
-        public PlanetService(IPlanetRepository planetRepository)
+        public PlanetService(IPlanetRepository planetRepository,
+            ICrewRepository crewRepository)
         {
             this.planetRepository = planetRepository;
+            this.crewRepository = crewRepository;
         }
 
-        public async Task<List<Planet>> GetAllPlanets()
+        public async Task<List<PlanetDTO>> GetAllPlanets()
         {
             var planets = await planetRepository.GetAllPlanets().ToListAsync();
 
-            return planets;
+            var users = await crewRepository.GetAllUsers().ToListAsync();
+
+            var planetsUsers = new List<PlanetDTO>();
+
+            foreach(var planet in planets)
+            {
+                foreach(var user in users)
+                {
+                    if (planet.UserId == user.Id)
+                    {
+                        var obj = new PlanetDTO()
+                        {
+                            Id = planet.Id,
+                            Name = planet.Name,
+                            Description = planet.Description,
+                            Status = planet.Status,
+                            UserId = planet.UserId,
+                            FirstNameUser = user.FirstName,
+                            LastNameUser = user.LastName
+                        };
+                        planetsUsers.Add(obj);
+                    }
+                }
+            }
+
+            return planetsUsers;
         }
 
         public async Task UpdateDescription(UpdateDescriptionDTO updateDescriptionDTO)

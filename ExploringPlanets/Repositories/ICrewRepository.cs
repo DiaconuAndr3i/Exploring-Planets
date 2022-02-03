@@ -12,5 +12,6 @@ namespace ExploringPlanets.Repositories
         public IQueryable<Crew> GetAllCrew();
         Task AddCrew(Crew crew);
         Task SaveChanges();
+        public IQueryable<User> GetAllUsers();
     }
 }

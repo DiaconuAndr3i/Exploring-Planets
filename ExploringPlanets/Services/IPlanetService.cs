@@ -9,7 +9,7 @@ namespace ExploringPlanets.Services
 {
     public interface IPlanetService
     {
-        Task<List<Planet>> GetAllPlanets();
+        Task<List<PlanetDTO>> GetAllPlanets();
         Task UpdateStatus(UpdateStatusDTO updateStatusDTO);
         Task UpdateDescription(UpdateDescriptionDTO updateDescriptionDTO);
     }

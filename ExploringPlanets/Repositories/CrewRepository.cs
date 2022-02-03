@@ -36,6 +36,13 @@ namespace ExploringPlanets.Repositories
             return robots;
         }
 
+        public IQueryable<User> GetAllUsers()
+        {
+            var users = db.Users;
+
+            return users;
+        }
+
         public async Task SaveChanges()
         {
             await db.SaveChangesAsync();
