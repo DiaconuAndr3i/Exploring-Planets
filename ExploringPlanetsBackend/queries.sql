@@ -11,7 +11,7 @@ delete from AspNetUsers;
 select * from Crews;
 
 delete from AspNetUsers
-where Id = '1643980328461';
+where Id = '1643982852074';
 
 insert into AspNetUsers
 values ('default', 'default', 'default', 'default', 'default', 0, 'default', 'default', 'default', null, 0, 0, null, 1, 0, 'default', 'default');

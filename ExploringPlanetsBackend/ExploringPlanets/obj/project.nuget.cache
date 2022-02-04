@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OexjU6gtePmAfTbjElv1Qq0X+ERhwD3E1s9xKzGRsaYGSOzIdOpBja/inrD4fd284jsdjGAMdbgBdKtpJxazyw==",
+  "dgSpecHash": "2xoE2ockQ0+QBOeqoO1Y1VczB/IpXGEe/drTmnji98KsPm4uChRO27V9x02antTRo+joEwPyAXA4NnEOZh+A8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanets\\ExploringPlanets.csproj",
+  "projectFilePath": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanetsBackend\\ExploringPlanets\\ExploringPlanets.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diaco\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\diaco\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.22\\microsoft.aspnetcore.authentication.jwtbearer.3.1.22.nupkg.sha512",
