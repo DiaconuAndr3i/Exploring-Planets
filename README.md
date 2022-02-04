@@ -26,3 +26,10 @@ Vue or without any frameworks, and should look something like):
 </p>
 
 <img src ="phone.png"/>
+
+<ol>The application practically allows the user to do two things:
+	<li>Allows the user to see all the planets existent in the solar system, in order to see
+their statuses (UX close to what is shown in the mockups)</li>
+<li>Allows the captain to change the status and description of a planet (this is up to
+you to figure out how exactly)</li>
+</ol>
