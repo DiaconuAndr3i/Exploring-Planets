@@ -39,6 +39,7 @@ namespace ExploringPlanets.Services
                         {
                             Id = planet.Id,
                             Name = planet.Name,
+                            Image = planet.Image,
                             Description = planet.Description,
                             Status = planet.Status,
                             UserId = planet.UserId,

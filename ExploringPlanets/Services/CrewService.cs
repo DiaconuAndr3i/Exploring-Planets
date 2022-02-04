@@ -31,12 +31,12 @@ namespace ExploringPlanets.Services
             }
         }
 
-        public async Task<List<Robot>> GetRobotsAvailableForMission()
+        public async Task<List<RobotDTO>> GetRobotsAvailableForMission()
         {
             var crewRepo = await crewRepository.GetAllCrew().ToListAsync();
             var robotsRepo = await crewRepository.GetAllRobots().ToListAsync();
 
-            var robots = new List<Robot>();
+            var robots = new List<RobotDTO>();
 
             
             foreach(var robot in robotsRepo)
@@ -48,7 +48,12 @@ namespace ExploringPlanets.Services
                         ok = 1;
                 }
                 if (ok == 0)
-                    robots.Add(robot);
+                    robots.Add(
+                        new RobotDTO
+                        {
+                            Id = robot.Id,
+                            Name = robot.Name
+                        });
             }
 
             return robots;

@@ -1,11 +1,18 @@
 <div id="formDiv">
-    <form action="/action_page.php">
+    <form action="/action_page.php" [formGroup]="loginForm" (ngSubmit)="onLogin()">
       <label for="email">Email</label>
-      <input type="text" id="email" name="email" placeholder="Your email">
+      <input type="text" id="email" name="email" placeholder="Your email" formControlName="email">
   
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Your password">
+      <input type="password" id="password" name="password" placeholder="Your password" formControlName="password">
     
       <input type="submit" value="Submit">
     </form>
+  </div>
+
+  <div class="alreadyAccount">
+    <span>
+        Don't have an account? Register <a routerLink="/register">here</a>.
+    </span>
+  
   </div>

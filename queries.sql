@@ -8,6 +8,11 @@ select * from Planets;
 
 delete from AspNetUsers;
 
+select * from Crews;
+
+delete from AspNetUsers
+where Id = '3aa09150-c3fa-4a00-ab7d-1e2bd1ac678c';
+
 insert into AspNetUsers
 values ('default', 'default', 'default', 'default', 'default', 0, 'default', 'default', 'default', null, 0, 0, null, 1, 0, 'default', 'default');
 
@@ -17,10 +22,10 @@ insert into AspNetRoles
 values ('Captain', 'Captain', 'Captain', null);
 
 insert into Planets
-values ('TAU23', 'TAU 23', 'No description yet', 'En route', 'default');
+values ('TAU23', 'TAU 23', 'No description yet', 'En route', 'default', 'without image');
 
 insert into Planets
-values ('ZETTA7', 'ZETTA 7', 'No description yet', 'En route', 'default');
+values ('ZETTA7', 'ZETTA 7', 'No description yet', 'En route', 'default', 'without image');
 
 select * from Robots;
 

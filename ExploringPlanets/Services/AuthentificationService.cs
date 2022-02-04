@@ -85,6 +85,7 @@ namespace ExploringPlanets.Services
         {
             var user = new User
             {
+                Id = registerDTO.Id,
                 FirstName = registerDTO.FirstName,
                 LastName = registerDTO.LastName,
                 Email = registerDTO.Email,

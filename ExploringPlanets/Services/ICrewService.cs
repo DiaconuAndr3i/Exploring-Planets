@@ -9,7 +9,7 @@ namespace ExploringPlanets.Services
 {
     public interface ICrewService
     {
-        Task<List<Robot>> GetRobotsAvailableForMission();
+        Task<List<RobotDTO>> GetRobotsAvailableForMission();
         Task AddCrew(RegistrationTeamDTO registrationTeamDTO);
     }
 }
