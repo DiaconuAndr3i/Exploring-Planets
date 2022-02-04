@@ -85,3 +85,7 @@ into an unstable state</li>
 <li>Use a means of authenticating users into the system</li>
 </ul>
 
+<hr>
+<p>I'm still working on the front end. So far only the authentication part as well as the interceptor to make authorized requests are implemented ... :)</p>
+
+
