@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanetsBackend\\ExploringPlanets\\ExploringPlanets.csproj": {}
+    "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanets\\ExploringPlanets.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanetsBackend\\ExploringPlanets\\ExploringPlanets.csproj": {
+    "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanets\\ExploringPlanets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanetsBackend\\ExploringPlanets\\ExploringPlanets.csproj",
+        "projectUniqueName": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanets\\ExploringPlanets.csproj",
         "projectName": "ExploringPlanets",
-        "projectPath": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanetsBackend\\ExploringPlanets\\ExploringPlanets.csproj",
+        "projectPath": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanets\\ExploringPlanets.csproj",
         "packagesPath": "C:\\Users\\diaco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanetsBackend\\ExploringPlanets\\obj\\",
+        "outputPath": "C:\\Users\\diaco\\source\\repos\\ExploringPlanets\\ExploringPlanets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diaco\\AppData\\Roaming\\NuGet\\NuGet.Config",
