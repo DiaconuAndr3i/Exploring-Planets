@@ -15,5 +15,6 @@ namespace ExploringPlanets.ObjectsDTO
         public string UserId { get; set; }
         public string FirstNameUser { get; set; }
         public string LastNameUser { get; set; }
+        public List<string> Robots { get; set; }
     }
 }

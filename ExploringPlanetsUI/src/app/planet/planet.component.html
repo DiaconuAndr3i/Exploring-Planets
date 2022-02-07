@@ -1,0 +1,57 @@
+<div *ngFor="let planet of this.planets; let i = index;">
+    <div class="gridContainer">
+        <div class="box1"><img class="center" src="assets/planetsPhoto/{{planet.image}}"/></div>
+        <div class="box2">
+            <div>
+                {{planet.name}}
+            </div>
+        </div>
+        <div class="box3">
+            <div>
+                {{planet.description}}
+            </div>
+        </div>
+        <div class="box4">
+            <div *ngIf="planet.userId!='default'"> 
+                <b>by captain</b> {{planet.firstNameUser}} {{planet.lastNameUser}}
+            </div>
+        </div>
+        <div *ngIf="planet.userId!='default'" class="box5"> <b>Robots:</b>
+            <div *ngFor="let robot of planet.robots">
+                {{robot}}
+            </div>
+        </div>
+        <div class="box6">
+            <div *ngIf="planet.status=='OK'" style="color: rgb(5, 252, 79);">
+            {{planet.status}}
+            </div>
+            <div *ngIf="planet.status=='!OK'" style="color: red;">
+                {{planet.status}}
+            </div>
+            <div *ngIf="planet.status=='TODO'" style="color: blue;">
+            {{planet.status}}
+            </div>
+            <div *ngIf="planet.status=='En route'" style="color: gray;">
+                {{planet.status}}
+            </div>
+        </div>
+        <button class="box7" (click)="selected(i+1)">Change details</button>
+    </div>
+    
+    <div class="content-block" *ngIf="i+1==this.indexMember && this.selectedMember">
+    <fieldset *ngIf="this.selectedMember">
+        <legend>Update details</legend>
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate(planet.id)">
+            <textarea placeholder="Please enter description" formControlName="description"></textarea>
+            <select name="status" id="status"  placeholder="Please selectstatus" formControlName="status">
+                <option>-select-</option>
+                <option>OK</option>
+                <option>!OK</option>
+                <option>En route</option>
+                <option>TODO</option>
+                </select>
+            <input type="submit" value="Update">
+        </form>
+    </fieldset>
+    </div>    
+</div>

@@ -24,7 +24,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   onLogin(){
-    debugger
     var loginData = new Login(this.loginForm.value);
     this.auth.login(loginData).subscribe();
   }

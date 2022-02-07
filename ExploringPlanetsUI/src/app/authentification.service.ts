@@ -33,7 +33,7 @@ export class AuthentificationService {
         localStorage.setItem('token', response.accessToken);
         localStorage.setItem('firstName', response.firstName);
         localStorage.setItem('lastName', response.lastName);
-        this.router.navigate(['/home']);
+        this.router.navigate([`/home/${response.id}`]);
       }
     }));
   }

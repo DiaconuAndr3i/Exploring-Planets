@@ -31,17 +31,18 @@ export class RegisterPageComponent implements OnInit {
     private auth: AuthentificationService, private crewService: CrewService) { }
 
   ngOnInit(): void {
-    debugger
     this.robots.getAvailableRobots().subscribe(response => this.Robots = response);
   }
 
   createCrew(idRobot: string){
-    debugger
     this.idRobots.push(idRobot);
   }
 
+  clearIdRobotsList(){
+    this.idRobots = [];
+  }
+
   onRegister(){
-    debugger
     var registrationData = new Register();
     var timestamp = String(Date.now())
 
@@ -55,8 +56,10 @@ export class RegisterPageComponent implements OnInit {
     crewData.UserId = timestamp;
     crewData.RobotIds = this.idRobots; 
 
-    this.auth.register(registrationData).subscribe();
-    this.crewService.createCrew(crewData).subscribe();
+    this.auth.register(registrationData).subscribe(() => {
+      this.crewService.createCrew(crewData).subscribe();
+    });
+    
   }
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { InformationsPlanetService } from '../informations-planet.service';
+import { Planet } from '../interfaces/planets';
+import { PlanetsService } from '../planets.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  planets: Planet[] = [];
+
+  constructor(private planetsService: PlanetsService, private infPlanet: InformationsPlanetService) { }
 
   ngOnInit(): void {
+    this.planetsService.getAllPlanets().subscribe(response => {
+      this.planets = response
+      this.infPlanet.planetMethod(this.planets);
+    });
   }
 
 }

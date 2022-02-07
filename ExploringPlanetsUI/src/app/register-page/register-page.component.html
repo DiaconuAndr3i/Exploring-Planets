@@ -18,6 +18,13 @@
           {{robot.name}}
         </option>
       </select>
+
+      <div *ngIf="this.idRobots.length != 0">
+        <ul>
+          <li *ngFor="let idRobot of this.idRobots">{{idRobot}}</li>
+        </ul>
+        <button id="clearButton" (click)="clearIdRobotsList()">Clear List</button>
+      </div>
     
       <input type="submit" value="Submit">
     </form>

@@ -16,7 +16,6 @@ export class CrewService {
   constructor(private http: HttpClient, private router: Router) { }
 
   createCrew(crewData: any): Observable<any>{
-    debugger
     return this.http.post<any>(`${this.URL}/createCrew`, crewData);
   }
 

@@ -27,6 +27,7 @@ namespace ExploringPlanets.Services
 
             var users = await crewRepository.GetAllUsers().ToListAsync();
 
+
             var planetsUsers = new List<PlanetDTO>();
 
             foreach(var planet in planets)
@@ -49,6 +50,17 @@ namespace ExploringPlanets.Services
                         planetsUsers.Add(obj);
                     }
                 }
+            }
+
+            foreach(var obj in planetsUsers)
+            {
+                var crew = await crewRepository.GetAllCrew()
+                .Include(x => x.User)
+                .Where(x => x.UserId == obj.UserId)
+                .Select(x => x.RobotId)
+                .ToListAsync();
+
+                obj.Robots = crew;
             }
 
             return planetsUsers;
