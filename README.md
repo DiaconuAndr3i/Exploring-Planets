@@ -25,7 +25,7 @@ that runs on phone resolution, written in whatever is most convenient ( Angular 
 Vue or without any frameworks, and should look something like):
 </p>
 
-<img src ="phone.png"/>
+<img src ="photos/phone.png"/>
 
 <ol>The application practically allows the user to do two things:
 	<li>Allows the user to see all the planets existent in the solar system, in order to see
@@ -86,6 +86,10 @@ into an unstable state</li>
 </ul>
 
 <hr>
-<p>I'm still working on the front end. So far only the authentication part as well as the interceptor to make authorized requests are implemented ... :)</p>
+<h2>Some pictures from App</h2>
+<img src="photos/img_app_3.png" />
+<img src="photos/img_app_4.png" />
+<img src="photos/img_app_1.png" />
+<img src="photos/img_app_2.png" />
 
 
